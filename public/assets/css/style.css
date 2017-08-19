@@ -17,6 +17,16 @@ background: linear-gradient(to bottom, #F3904F, #40322a); /* W3C, IE 10+/ Edge, 
     justify-content: space-around;
 }
 
-.itm{
-   display: inline-block; 
+.brgr-waiting{
+    display: flex;
+    justify-content: space-around;
+}
+
+ul{
+list-style-type: none;
+}
+
+.brgr-add{
+    display: flex;
+    justify-content: center;
 }

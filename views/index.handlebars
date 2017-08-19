@@ -4,11 +4,11 @@
     <ul>
       {{#each burgers}}
         {{#unless this.devoured}}
-          <li>
+          <li class="brgr-waiting">
             {{this.burger_name}}
 
             <form action="/{{this.id}}?_method=PUT" method="POST">
-              <input class="itm" type="hidden" name="devoured" value="true">
+              <input class="itm" type="hidden" name="devoured">
               <button class="itm" type="submit">Devour!</button>
             </form>
 
@@ -26,9 +26,8 @@
             {{this.burger_name}}
 
             <form action="/{{this.id}}?_method=PUT" method="POST">
-              <input class="itm" type="hidden" name="devoured" value="true">
-              <button class="itm" type="submit">Devour!</button>
-            </form>
+              <input class="itm" type="hidden" name="devoured">
+              </form>
 
           </li>
           {{/if}}
@@ -39,7 +38,7 @@
 
 </div>
 
-<div>
+<div class="brgr-add">
   <form class="create-form" action="/" method="POST">
 
     <div class="form-group">
