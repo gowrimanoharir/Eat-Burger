@@ -1,26 +1,51 @@
 <h1>Eat-Da-Burger</h1>
+<div class="brgr-list">
+  <div class="notEaten"> 
+    <ul>
+      {{#each burgers}}
+        {{#unless this.devoured}}
+          <li>
+            {{this.burger_name}}
 
-<ul>
-  {{#each burgers}}
-    
-      <li>
-        {{this.burger_name}}
+            <form action="/{{this.id}}?_method=PUT" method="POST">
+              <input class="itm" type="hidden" name="devoured" value="true">
+              <button class="itm" type="submit">Devour!</button>
+            </form>
 
-        <form action="/{{this.id}}?_method=PUT" method="POST">
-          <input type="hidden" name="devoured" value="true">
-          <button type="submit">Devour!</button>
-        </form>
+          </li>
+          {{/unless}}
+        
+      {{/each}}
+    </ul>
+  </div>
+  <div class="devoured">
+    <ul>
+      {{#each burgers}}
+        {{#if this.devoured}}
+          <li>
+            {{this.burger_name}}
 
-      </li>
-    
-  {{/each}}
-</ul>
+            <form action="/{{this.id}}?_method=PUT" method="POST">
+              <input class="itm" type="hidden" name="devoured" value="true">
+              <button class="itm" type="submit">Devour!</button>
+            </form>
 
-<form class="create-form" action="/" method="POST">
-
-  <div class="form-group">
-    <input type="text" id="brgr" name="name">
+          </li>
+          {{/if}}
+        
+      {{/each}}
+    </ul>
   </div>
 
-  <button type="submit">Submit</button>
-</form>
+</div>
+
+<div>
+  <form class="create-form" action="/" method="POST">
+
+    <div class="form-group">
+      <input type="textarea" id="brgr" name="name">
+    </div>
+
+    <button type="submit">Submit</button>
+  </form>
+</div>
