@@ -58,5 +58,5 @@ typings/
 .env
 
 #Config
-config/sqlConfig.js
+./config/sqlConfig.js
 
