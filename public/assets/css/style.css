@@ -6,27 +6,83 @@ body, html{
 body{
     margin: 0;
     padding: 0;
-    background: #F56217;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to bottom, #F3904F, #40322a);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to bottom, #F3904F, #40322a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      background: transparent url('../images/burger.jpg') scroll 0 0 no-repeat;
+  background-size: cover;
+  font-weight: bold;
+  font-size: 20px;
+  color: #000;
+}
 
+.brgr-hdr{
+    text-align: center;
+    font-size: 50px;
+}
+
+ul{
+    list-style-type: none;
 }
 
 .brgr-list{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    line-height: 1.5;
+
+}
+
+.notEaten{
+    margin-right: 200px;
+    text-align: center;
 }
 
 .brgr-waiting{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    background-color: #95E667;
+    margin: 15px;
 }
 
-ul{
-list-style-type: none;
+.brgr-eaten{
+    background-color: #F45F5F;
+    margin: 15px;
+}
+
+.brgr-dvr{
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 2px;
+    margin-left: 20px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    cursor: hand;
+}
+
+
+
+.devoured{
+    text-align: center;
 }
 
 .brgr-add{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    line-height: 3;
+}
+
+.add-txt{
+    width: 400px;
+    line-height: 3;
+}
+
+.sbt-txt{
+    background-color: #000;
+    color: #fff;
+    border-radius: 2px;
+    border: none;
+    width: 150px;
+    font-size: 25px;
+    font-weight: bold;
+    margin-left: 120px;
 }

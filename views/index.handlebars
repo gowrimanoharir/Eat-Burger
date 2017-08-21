@@ -1,6 +1,7 @@
-<h1>Eat-Da-Burger</h1>
+<h1 class="brgr-hdr">Eat-Da-Burger</h1>
 <div class="brgr-list">
   <div class="notEaten"> 
+    <h2>Waiting for You!</h2>
     <ul>
       {{#each burgers}}
         {{#unless this.devoured}}
@@ -8,8 +9,8 @@
             {{this.burger_name}}
 
             <form action="/{{this.id}}?_method=PUT" method="POST">
-              <input class="itm" type="hidden" name="devoured">
-              <button class="itm" type="submit">Devour!</button>
+              <input type="hidden" name="devoured">
+              <button class="brgr-dvr" type="submit">Devour!</button>
             </form>
 
           </li>
@@ -19,16 +20,12 @@
     </ul>
   </div>
   <div class="devoured">
+    <h2>Devoured!</h2>
     <ul>
       {{#each burgers}}
         {{#if this.devoured}}
-          <li>
+          <li class="brgr-eaten">
             {{this.burger_name}}
-
-            <form action="/{{this.id}}?_method=PUT" method="POST">
-              <input class="itm" type="hidden" name="devoured">
-              </form>
-
           </li>
           {{/if}}
         
@@ -42,9 +39,9 @@
   <form class="create-form" action="/" method="POST">
 
     <div class="form-group">
-      <input type="textarea" id="brgr" name="name">
+      <input class="add-txt" type="textarea" id="brgr" name="name">
     </div>
 
-    <button type="submit">Submit</button>
+    <button class="sbt-txt" type="submit">Submit</button>
   </form>
 </div>
